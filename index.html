@@ -1,8 +1,10 @@
 <?php
-$expires = 60 * 60 * 24;
-$expires_date = gmdate('D, d M Y H:i:s', time() + $expires) . ' GMT';
-header("Cache-Control: public, max-age=$expires, no-transform");
-header("Expires: $expires_date");
+function set_cache_header() {
+    $expires = 60 * 60 * 24;
+    $expires_date = gmdate('D, d M Y H:i:s', time() + $expires) . ' GMT';
+    header("Cache-Control: public, max-age=$expires, no-transform");
+    header("Expires: $expires_date");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +34,8 @@ http://www.tooplate.com/view/2076-zentro
 	<link rel="stylesheet" href="css/nivo_themes/default/default.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+
+
 </head>
 <body>
 
@@ -87,30 +91,35 @@ http://www.tooplate.com/view/2076-zentro
 				<hr>
 			</div>
 			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
+				<?php set_cache_header(); ?>
 				<a href="images/gallery-img1.jpg" data-lightbox-gallery="zenda-gallery"><img src="images/gallery-img1.jpg" alt="gallery img"></a>
 				<div>
 					<h3>Lemon-Rosemary Prawn</h3>
 					<span>Seafood / Shrimp / Lemon</span>
 				</div>
-				<a href="images/gallery-img2.jpg" data-lightbox-gallery="zenda-gallery"><img src="images/gallery-img2.jpg" alt="gallery img"></a>
+				<?php set_cache_header(); ?>
+				<a href="images/gallery-img2.jpg" data-lightbox-gallery="zenda-gallery"><img src="images/gallery-img2.jpg" alt="gallery img" ></a>
 				<div>
 					<h3>Lemon-Rosemary Vegetables</h3>
 					<span>Tomato / Rosemary / Lemon</span>
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
-				<a href="images/gallery-img3.jpg" data-lightbox-gallery="zenda-gallery"><img src="images/gallery-img3.jpg" alt="gallery img"></a>
+				<?php set_cache_header(); ?>
+				<a href="images/gallery-img3.jpg" data-lightbox-gallery="zenda-gallery"><img src="images/gallery-img3.jpg" alt="gallery img" ></a>
 				<div>
 					<h3>Lemon-Rosemary Bakery</h3>
 					<span>Bread / Rosemary / Orange</span>
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.9s">
+				<?php set_cache_header(); ?>
 				<a href="images/gallery-img4.jpg" data-lightbox-gallery="zenda-gallery"><img src="images/gallery-img4.jpg" alt="gallery img"></a>
 				<div>
 					<h3>Lemon-Rosemary Salad</h3>
 					<span>Chicken / Rosemary / Green</span>
 				</div>
+				<?php set_cache_header(); ?>
 				<a href="images/gallery-img5.jpg" data-lightbox-gallery="zenda-gallery"><img src="images/gallery-img5.jpg" alt="gallery img"></a>
 				<div>
 					<h3>Lemon-Rosemary Pizza</h3>
@@ -176,17 +185,20 @@ http://www.tooplate.com/view/2076-zentro
 				<hr>
 			</div>
 			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
+				<?php set_cache_header(); ?>
 				<img src="images/team1.jpg" class="img-responsive center-block" alt="team img">
 				<h4>Thanya</h4>
 				<h3>Main Chef</h3>
 			</div>
 			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
+				<?php set_cache_header(); ?>
 				<img src="images/team2.jpg" class="img-responsive center-block" alt="team img">
 				<h4>Lynda</h4>
 				<h3>Pizza Specialist</h3>
 			</div>
 			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.9s">
-				<img src="images/team3.jpg" class="img-responsive center-block" alt="team img">
+				<?php set_cache_header(); ?>
+				<img src="images/team3.jpg" class="img-responsive center-block " alt="team img">
 				<h4>Jenny Ko</h4>
 				<h3>New Baker</h3>
 			</div>
