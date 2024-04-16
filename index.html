@@ -1,5 +1,5 @@
 <?php
-$expires = 60 * 60 * 24 * 365;
+$expires = 60 * 60 * 18;
 $expires_date = gmdate('D, d M Y H:i:s', time() + $expires) . ' GMT';
 header("Cache-Control: public, max-age=$expires");
 header("Expires: $expires_date");
