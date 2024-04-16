@@ -1,12 +1,16 @@
 <?php
 $expires = 60 * 60 * 24;
 $expires_date = gmdate('D, d M Y H:i:s', time() + $expires) . ' GMT';
-header("Cache-Control: public, max-age=$expires");
+header("Cache-Control: public, max-age=$expires, no-transform");
 header("Expires: $expires_date");
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 	<meta charset="utf-8">
 	<title>Zentro</title>
 
